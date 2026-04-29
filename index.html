@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lko-Explorer | A Local's Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LKO-EXPLORER</a>
+            <div class="ms-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#heritage">Heritage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#culinary">Taste of Awadh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hidden">Hidden Gems</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center text-white d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-2">Experience the City of Nawabs</h1>
+            <p class="lead">From the grand Rumi Darwaza to the secret corners of Dilkusha.</p>
+        </div>
+    </header>
+<div class="container text-center my-4">
+    <button class="btn btn-navy mx-1" onclick="renderLucknow('all')">All</button>
+    <button class="btn btn-outline-navy mx-1" onclick="renderLucknow('heritage')">Heritage</button>
+    <button class="btn btn-outline-navy mx-1" onclick="renderLucknow('culinary')">Food</button>
+    <button class="btn btn-outline-navy mx-1" onclick="renderLucknow('hidden')">Modern & Gems</button>
+</div>
+
+<section id="explore" class="container">
+    <div class="row" id="main-gallery">
+        </div>
+</section>
+<!-- Search Bar -->
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <input type="text" id="citySearch" class="form-control" placeholder="Search for a monument or food joint..." onkeyup="searchLocation()">
+        </div>
+    </div>
+</div>
+<!-- Category Filter Buttons -->
+<div class="container text-center my-4">
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button class="btn btn-navy" onclick="renderLucknow('all')">All Places</button>
+        <button class="btn btn-outline-navy" onclick="renderLucknow('heritage')">Heritage</button>
+        <button class="btn btn-outline-navy" onclick="renderLucknow('culinary')">Food</button>
+        <button class="btn btn-outline-navy" onclick="renderLucknow('hidden')">Hidden Gems</button>
+    </div>
+</div>
+<!-- Contact Section (For a 'Complete' Project Feel) -->
+<section id="contact" class="bg-navy text-white py-5 mt-5">
+    <div class="container">
+        <h2 class="text-center mb-4 font-playfair" style="color: var(--gold);">Get in Touch</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <form id="contactForm">
+                    <input type="text" class="form-control mb-3" placeholder="Your Name">
+                    <input type="email" class="form-control mb-3" placeholder="Your Email">
+                    <textarea class="form-control mb-3" placeholder="Suggest a Hidden Gem..."></textarea>
+                    <button type="button" class="btn btn-navy w-100" onclick="alert('Thank you for your suggestion!')">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="text-center p-4">
+        <p>&copy; 2026 Lko-Explorer - Minor Project by Anshool</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

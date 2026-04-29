@@ -1,0 +1,120 @@
+:root {
+    --royal-blue: #002366;
+    --gold: #D4AF37;
+    --soft-white: #F8F9FA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--soft-white);
+}
+
+h1, h2, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+    background-color: var(--royal-blue);
+    border-bottom: 3px solid var(--gold);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--gold) !important;
+    font-weight: bold;
+}
+
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(0,35,102,0.7), rgba(0,35,102,0.7)), 
+                url('https://images.unsplash.com/photo-1595928642581-f50f4f3453a5?auto=format&fit=crop&q=80&w=1000') no-repeat center;
+    background-size: cover;
+    border-bottom: 5px solid var(--gold);
+}
+
+.section-title {
+    color: var(--royal-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--gold);
+}
+
+.btn-primary {
+    background-color: var(--royal-blue);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+.btn-navy {
+    background-color: var(--royal-blue);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+.btn-outline-navy {
+    border: 1px solid var(--royal-blue);
+    color: var(--royal-blue);
+}
+
+.btn-outline-navy:hover {
+    background-color: var(--royal-blue);
+    color: var(--gold);
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.badge {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.bg-navy {
+    background-color: var(--royal-blue);
+}
+
+#citySearch {
+    border: 2px solid var(--gold);
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+#citySearch:focus {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    outline: none;
+}
+
+.nav-link {
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Adds a small gold underline on hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--gold);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
